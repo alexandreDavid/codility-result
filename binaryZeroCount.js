@@ -16,3 +16,5 @@ function solution(N) {
   }
   return res
 }
+
+module.exports = solution
