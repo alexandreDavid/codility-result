@@ -1,4 +1,4 @@
-const solution = require("./permCheck")
+const solution = require("./challenge20191223")
 
 function generateArray(L, odd) {
   let arr = []
@@ -26,9 +26,28 @@ function generateArraySmallInt(L) {
   return arr
 }
 
+
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array
+}
+
+function generateArrayInt3same(L) {
+  let arr = []
+  for (let i = 0 ; i < L / 3; i++) {
+    arr.push(i, i, i)
+  }
+  return shuffleArray(arr)
+}
+
 const startTime = new Date().getTime()
 // const arr = generateArraySmallInt(10)
-const sol = solution([1, 2, 2, 6, 5, 6])
+// const sol = solution([2, 0, 2, 2, 1, 0])
+// const sol = solution([5, 5, 0, 5, 5, 5])
 // const sol = solution([9, 5, 7, 3, 2, 7, 3, 1, 10, 8])
+const sol = solution(generateArrayInt3same(5000))
 console.log(sol)
 console.log(`${(new Date().getTime() - startTime)*.001}s`)
