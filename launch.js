@@ -1,4 +1,4 @@
-const solution = require("./tapeEquilibrium")
+const solution = require("./permCheck")
 
 function generateArray(L, odd) {
   let arr = []
@@ -27,7 +27,8 @@ function generateArraySmallInt(L) {
 }
 
 const startTime = new Date().getTime()
-const arr = generateArraySmallInt(10)
-const sol = solution(arr)
+// const arr = generateArraySmallInt(10)
+const sol = solution([1, 2, 2, 6, 5, 6])
+// const sol = solution([9, 5, 7, 3, 2, 7, 3, 1, 10, 8])
 console.log(sol)
 console.log(`${(new Date().getTime() - startTime)*.001}s`)
