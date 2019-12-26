@@ -1,4 +1,4 @@
-const solution = require("./challenge20191223")
+const solution = require("./maxCounter")
 
 function generateArray(L, odd) {
   let arr = []
@@ -18,10 +18,10 @@ function generateArray(L, odd) {
   return shuffleArray(arr)
 }
 
-function generateArraySmallInt(L) {
+function generateArraySmallInt(L, max) {
   let arr = []
   for (let i = 0 ; i < L; i++) {
-    arr.push(Math.floor((Math.random() - 0.5) * 20))
+    arr.push(Math.floor((Math.random()) * max))
   }
   return arr
 }
@@ -48,6 +48,7 @@ const startTime = new Date().getTime()
 // const sol = solution([2, 0, 2, 2, 1, 0])
 // const sol = solution([5, 5, 0, 5, 5, 5])
 // const sol = solution([9, 5, 7, 3, 2, 7, 3, 1, 10, 8])
-const sol = solution(generateArrayInt3same(5000))
+// const sol = solution(5, [3, 4, 4, 6, 1, 4, 4])
+const sol = solution(10000, generateArraySmallInt(10000, 20000))
 console.log(sol)
 console.log(`${(new Date().getTime() - startTime)*.001}s`)
