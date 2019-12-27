@@ -1,4 +1,4 @@
-const solution = require("./countDiv")
+const solution = require("./maxProductOfThree")
 
 function generateArray(L, odd) {
   let arr = []
@@ -49,6 +49,6 @@ const startTime = new Date().getTime()
 // const sol = solution([5, 5, 0, 5, 5, 5])
 // const sol = solution([9, 5, 7, 3, 2, 7, 3, 1, 10, 8])
 // const sol = solution(5, [3, 4, 4, 6, 1, 4, 4])
-const sol = solution(0, 0, 11)
+const sol = solution([-5, 5, -5, 4])
 console.log(sol)
 console.log(`${(new Date().getTime() - startTime)*.001}s`)
