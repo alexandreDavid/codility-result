@@ -1,4 +1,4 @@
-const solution = require("./maxCounter")
+const solution = require("./minAvgTwoSlice")
 
 function generateArray(L, odd) {
   let arr = []
@@ -49,6 +49,6 @@ const startTime = new Date().getTime()
 // const sol = solution([5, 5, 0, 5, 5, 5])
 // const sol = solution([9, 5, 7, 3, 2, 7, 3, 1, 10, 8])
 // const sol = solution(5, [3, 4, 4, 6, 1, 4, 4])
-const sol = solution(10000, generateArraySmallInt(10000, 20000))
+const sol = solution([-3, -5, -8, -4, -10])
 console.log(sol)
 console.log(`${(new Date().getTime() - startTime)*.001}s`)
