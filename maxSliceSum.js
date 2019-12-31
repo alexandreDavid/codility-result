@@ -7,17 +7,12 @@ function solution(A) {
     return A[0] || 0;
   }
   let maxSum = A[0];
-  if (A[0] < 0) {
-    A[0] = 0
-  }
   A.reduce((x, y) => {
-    const sum = x + y;
-    if (y > maxSum) {
-      maxSum = y;
+    if (x < 0) {
+      x = 0;
     }
-    if (sum < 0) {
-      return 0;
-    } else if (sum > maxSum) {
+    const sum = x + y;
+    if (sum > maxSum) {
       maxSum = sum;
     }
     return sum;
